@@ -1,0 +1,6 @@
+# Add one neighborhood name per line. The pipeline geocodes each name
+# using Nominatim with "Dublin, OH" as location bias.
+# Example:
+# Muirfield Village
+# Ballantrae
+# Tartan Fields
