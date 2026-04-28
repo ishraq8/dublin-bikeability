@@ -1,0 +1,8 @@
+node_modules/
+dist/
+data/dublin_graph.graphml
+data/centroids.json
+data/scores.json
+__pycache__/
+*.pyc
+.env
