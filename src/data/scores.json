@@ -1,0 +1,135 @@
+[
+  {
+    "id": "muirfield",
+    "name": "Muirfield Village",
+    "region": "Dublin City",
+    "current_hs": "coffman",
+    "redistricting": false,
+    "lat": 40.0900,
+    "lng": -83.1100,
+    "includes": ["Muirfield Village"],
+    "schools": {
+      "scioto": {
+        "score": 67,
+        "distanceMi": 2.3,
+        "trailPct": 65,
+        "crossings": 1,
+        "elevationGainM": 12,
+        "routeCoords": [
+          [40.0900, -83.1100, "path"],
+          [40.0920, -83.1060, "path"],
+          [40.0945, -83.0980, "residential"],
+          [40.0965, -83.0870, "arterial"],
+          [40.0978, -83.0742, "arterial"]
+        ]
+      },
+      "coffman": {
+        "score": 95,
+        "distanceMi": 0.4,
+        "trailPct": 90,
+        "crossings": 0,
+        "elevationGainM": 4,
+        "routeCoords": [
+          [40.0900, -83.1100, "path"],
+          [40.0915, -83.1095, "path"],
+          [40.0934, -83.1089, "path"]
+        ]
+      },
+      "jerome": {
+        "score": null,
+        "distanceMi": 5.8,
+        "trailPct": 42,
+        "crossings": 3,
+        "elevationGainM": 28,
+        "routeCoords": null
+      }
+    }
+  },
+  {
+    "id": "ballantrae",
+    "name": "Ballantrae",
+    "region": "Dublin City",
+    "current_hs": "jerome",
+    "redistricting": true,
+    "lat": 40.1180,
+    "lng": -83.1350,
+    "includes": ["Ballantrae", "Ballantrae Falls"],
+    "schools": {
+      "scioto": {
+        "score": 30,
+        "distanceMi": 3.6,
+        "trailPct": 38,
+        "crossings": 3,
+        "elevationGainM": 22,
+        "routeCoords": [
+          [40.1180, -83.1350, "residential"],
+          [40.1100, -83.1200, "arterial"],
+          [40.1050, -83.1050, "arterial"],
+          [40.0978, -83.0742, "arterial"]
+        ]
+      },
+      "coffman": {
+        "score": 57,
+        "distanceMi": 2.1,
+        "trailPct": 55,
+        "crossings": 2,
+        "elevationGainM": 18,
+        "routeCoords": [
+          [40.1180, -83.1350, "path"],
+          [40.1100, -83.1300, "path"],
+          [40.1020, -83.1200, "residential"],
+          [40.0934, -83.1089, "residential"]
+        ]
+      },
+      "jerome": {
+        "score": 78,
+        "distanceMi": 1.5,
+        "trailPct": 75,
+        "crossings": 1,
+        "elevationGainM": 10,
+        "routeCoords": [
+          [40.1180, -83.1350, "path"],
+          [40.1230, -83.1280, "path"],
+          [40.1280, -83.1180, "residential"],
+          [40.1312, -83.1102, "residential"]
+        ]
+      }
+    }
+  },
+  {
+    "id": "tartan",
+    "name": "Tartan Fields",
+    "region": "Union County",
+    "current_hs": "jerome",
+    "redistricting": false,
+    "lat": 40.1650,
+    "lng": -83.1500,
+    "includes": ["Tartan Fields"],
+    "schools": {
+      "scioto": {
+        "score": null,
+        "distanceMi": 7.2,
+        "trailPct": 15,
+        "crossings": 4,
+        "elevationGainM": 45,
+        "routeCoords": null
+      },
+      "coffman": {
+        "score": null,
+        "distanceMi": 5.9,
+        "trailPct": 22,
+        "crossings": 3,
+        "elevationGainM": 38,
+        "routeCoords": null
+      },
+      "jerome": {
+        "score": null,
+        "distanceMi": 4.3,
+        "trailPct": 35,
+        "crossings": 2,
+        "elevationGainM": 31,
+        "routeCoords": null
+      }
+    }
+  }
+]
