@@ -19,7 +19,7 @@ SCHOOLS = {
     "jerome":  {"lat": 40.13493, "lng": -83.17589},  # 8300 Hyland-Croy Rd
 }
 
-ARTERIAL_NAMES   = {"sawmill", "sr-161", "state route 161", "avery", "hyland croy", "hard"}
+ARTERIAL_NAMES   = {"sawmill", "sr-161", "state route 161", "bridge street", "dublin granville", "dublin-granville", "avery", "hyland croy", "hard"}
 PATH_TAGS        = {"path", "footway", "pedestrian"}
 CYCLEWAY_TAGS    = {"cycleway"}
 RESIDENTIAL_TAGS = {"residential", "unclassified", "tertiary", "living_street"}
@@ -64,14 +64,43 @@ def classify_edge_type(data: dict) -> str:
     return "residential"
 
 
-def count_arterial_crossings(edges: list[dict]) -> int:
-    crossed = set()
-    for data in edges:
-        name = str(data.get("name", "")).lower()
-        for arterial in ARTERIAL_NAMES:
-            if arterial in name:
-                crossed.add(arterial)
-    return len(crossed)
+def _edge_names(data: dict) -> set[str]:
+    raw = data.get("name", "") or ""
+    if isinstance(raw, list):
+        return {str(r).lower() for r in raw}
+    return {str(raw).lower()}
+
+
+def count_arterial_crossings(G, path_nodes: list) -> int:
+    """Count distinct arterials the route crosses (passes through, not travels along)."""
+    if len(path_nodes) < 3:
+        return 0
+
+    crossed: set[str] = set()
+
+    for i in range(1, len(path_nodes) - 1):
+        node = path_nodes[i]
+
+        # Names of the two route edges touching this node
+        route_names: set[str] = set()
+        for u, v in [(path_nodes[i - 1], node), (node, path_nodes[i + 1])]:
+            best = min(G[u][v].values(), key=lambda d: d.get("weight", 1))
+            route_names |= _edge_names(best)
+
+        # Scan all adjacent edges in both directions for arterials
+        for nbr in set(G.successors(node)) | set(G.predecessors(node)):
+            edges_here = (
+                list(G[node][nbr].values()) if G.has_edge(node, nbr) else []
+            ) + (
+                list(G[nbr][node].values()) if G.has_edge(nbr, node) else []
+            )
+            for edata in edges_here:
+                for ename in _edge_names(edata):
+                    for arterial in ARTERIAL_NAMES:
+                        if arterial in ename and not any(arterial in rn for rn in route_names):
+                            crossed.add(arterial)
+
+    return min(len(crossed), 5)
 
 
 def compute_elevation_gain(elevations: list[float]) -> float:
@@ -141,7 +170,7 @@ def score_pair(G, elevation_data, centroid: dict, school: dict) -> dict:
     edges         = get_route_edges(G, path)
     distance_mi   = get_route_length_miles(G, path)
     trail_pct     = compute_trail_pct(edges)
-    crossings     = count_arterial_crossings(edges)
+    crossings     = count_arterial_crossings(G, path)
     elevations    = get_node_elevations(G, path, elevation_data)
     elev_gain     = round(compute_elevation_gain(elevations))
     score         = compute_score(distance_mi, trail_pct, crossings, elev_gain)

@@ -15,7 +15,7 @@
         "score": null,
         "distanceMi": 5.65,
         "trailPct": 92,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 53,
         "routeCoords": null
       },
@@ -28,10 +28,10 @@
         "routeCoords": null
       },
       "jerome": {
-        "score": 59,
+        "score": 57,
         "distanceMi": 3.46,
         "trailPct": 97,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 37,
         "routeCoords": [
           [
@@ -249,7 +249,7 @@
         "score": null,
         "distanceMi": 7.82,
         "trailPct": 96,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 68,
         "routeCoords": null
       },
@@ -448,7 +448,7 @@
         "score": null,
         "distanceMi": 7.77,
         "trailPct": 95,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 61,
         "routeCoords": null
       },
@@ -602,7 +602,7 @@
         "score": null,
         "distanceMi": 5.91,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 57,
         "routeCoords": null
       },
@@ -615,10 +615,10 @@
         "routeCoords": null
       },
       "jerome": {
-        "score": 62,
+        "score": 59,
         "distanceMi": 3.33,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 37,
         "routeCoords": [
           [
@@ -826,7 +826,7 @@
         "score": null,
         "distanceMi": 8.81,
         "trailPct": 90,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 78,
         "routeCoords": null
       },
@@ -861,10 +861,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 77,
+        "score": 74,
         "distanceMi": 1.98,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 39,
         "routeCoords": [
           [
@@ -1202,7 +1202,7 @@
         "score": null,
         "distanceMi": 6.23,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 77,
         "routeCoords": null
       }
@@ -1224,7 +1224,7 @@
         "score": null,
         "distanceMi": 6.36,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 52,
         "routeCoords": null
       },
@@ -1493,7 +1493,7 @@
         "score": null,
         "distanceMi": 6.75,
         "trailPct": 93,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 66,
         "routeCoords": null
       },
@@ -1567,7 +1567,7 @@
         "score": null,
         "distanceMi": 7.91,
         "trailPct": 82,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 62,
         "routeCoords": null
       },
@@ -1704,7 +1704,7 @@
         "score": null,
         "distanceMi": 16.02,
         "trailPct": 62,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 124,
         "routeCoords": null
       },
@@ -1731,10 +1731,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 58,
+        "score": 55,
         "distanceMi": 3.34,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 60,
         "routeCoords": [
           [
@@ -2062,7 +2062,7 @@
         "score": null,
         "distanceMi": 5.75,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 68,
         "routeCoords": null
       }
@@ -2148,7 +2148,7 @@
         "score": null,
         "distanceMi": 4.17,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 38,
         "routeCoords": null
       },
@@ -2156,7 +2156,7 @@
         "score": null,
         "distanceMi": 7.4,
         "trailPct": 99,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 80,
         "routeCoords": null
       }
@@ -2178,7 +2178,7 @@
         "score": null,
         "distanceMi": 4.23,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 62,
         "routeCoords": null
       },
@@ -2385,7 +2385,7 @@
         "score": null,
         "distanceMi": 5.31,
         "trailPct": 98,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 80,
         "routeCoords": null
       }
@@ -2407,7 +2407,7 @@
         "score": null,
         "distanceMi": 4.53,
         "trailPct": 86,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 43,
         "routeCoords": null
       },
@@ -2494,7 +2494,7 @@
         "score": null,
         "distanceMi": 4.75,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 49,
         "routeCoords": null
       }
@@ -2610,7 +2610,7 @@
         "score": null,
         "distanceMi": 4.75,
         "trailPct": 86,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 47,
         "routeCoords": null
       },
@@ -2618,7 +2618,7 @@
         "score": null,
         "distanceMi": 7.97,
         "trailPct": 96,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 89,
         "routeCoords": null
       }
@@ -2719,7 +2719,7 @@
         "score": null,
         "distanceMi": 4.17,
         "trailPct": 72,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 40,
         "routeCoords": null
       },
@@ -2727,7 +2727,7 @@
         "score": null,
         "distanceMi": 7.4,
         "trailPct": 92,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 82,
         "routeCoords": null
       }
@@ -2749,7 +2749,7 @@
         "score": null,
         "distanceMi": 15.93,
         "trailPct": 97,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 100,
         "routeCoords": null
       },
@@ -2784,10 +2784,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 56,
+        "score": 54,
         "distanceMi": 3.61,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 44,
         "routeCoords": [
           [
@@ -3095,7 +3095,7 @@
         "score": null,
         "distanceMi": 4.22,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 35,
         "routeCoords": null
       }
@@ -3117,7 +3117,7 @@
         "score": null,
         "distanceMi": 6.71,
         "trailPct": 96,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 67,
         "routeCoords": null
       },
@@ -3125,7 +3125,7 @@
         "score": null,
         "distanceMi": 4.56,
         "trailPct": 90,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 36,
         "routeCoords": null
       },
@@ -3198,10 +3198,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 51,
+        "score": 49,
         "distanceMi": 3.94,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 48,
         "routeCoords": [
           [
@@ -3526,10 +3526,10 @@
         ]
       },
       "jerome": {
-        "score": 63,
+        "score": 60,
         "distanceMi": 3.27,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 35,
         "routeCoords": [
           [
@@ -3764,10 +3764,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 72,
+        "score": 69,
         "distanceMi": 2.35,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 41,
         "routeCoords": [
           [
@@ -4100,7 +4100,7 @@
         "score": null,
         "distanceMi": 6.0,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 78,
         "routeCoords": null
       }
@@ -4112,341 +4112,90 @@
     "region": "Dublin City",
     "current_hs": null,
     "redistricting": false,
-    "lat": 40.098,
-    "lng": -83.115,
+    "lat": 40.1111553,
+    "lng": -83.1392353,
     "includes": [
       "Hemingway Village"
     ],
     "schools": {
       "scioto": {
-        "score": 68,
-        "distanceMi": 2.51,
-        "trailPct": 94,
-        "crossings": 0,
-        "elevationGainM": 40,
-        "routeCoords": [
-          [
-            40.098763,
-            -83.1150438,
-            "path"
-          ],
-          [
-            40.0989172,
-            -83.1152449,
-            "path"
-          ],
-          [
-            40.0992676,
-            -83.1153002,
-            "path"
-          ],
-          [
-            40.0992606,
-            -83.1153985,
-            "residential"
-          ],
-          [
-            40.0993538,
-            -83.1154159,
-            "residential"
-          ],
-          [
-            40.0994621,
-            -83.1154367,
-            "path"
-          ],
-          [
-            40.0994534,
-            -83.1155312,
-            "path"
-          ],
-          [
-            40.1005683,
-            -83.1157231,
-            "path"
-          ],
-          [
-            40.1006683,
-            -83.1157277,
-            "path"
-          ],
-          [
-            40.1007823,
-            -83.1157344,
-            "path"
-          ],
-          [
-            40.1015513,
-            -83.1158249,
-            "path"
-          ],
-          [
-            40.1017508,
-            -83.1158493,
-            "path"
-          ],
-          [
-            40.1017415,
-            -83.1156378,
-            "path"
-          ],
-          [
-            40.1018911,
-            -83.1143759,
-            "path"
-          ],
-          [
-            40.1022297,
-            -83.114446,
-            "path"
-          ],
-          [
-            40.1037898,
-            -83.1147182,
-            "path"
-          ],
-          [
-            40.1038946,
-            -83.1147189,
-            "path"
-          ],
-          [
-            40.1088797,
-            -83.1148672,
-            "path"
-          ],
-          [
-            40.1095091,
-            -83.1152787,
-            "path"
-          ],
-          [
-            40.1095409,
-            -83.1149375,
-            "path"
-          ],
-          [
-            40.1095231,
-            -83.114756,
-            "path"
-          ],
-          [
-            40.1095153,
-            -83.1145666,
-            "path"
-          ],
-          [
-            40.1098525,
-            -83.1111933,
-            "path"
-          ],
-          [
-            40.109865,
-            -83.1111796,
-            "path"
-          ],
-          [
-            40.1099013,
-            -83.1109453,
-            "path"
-          ],
-          [
-            40.109975,
-            -83.1106581,
-            "path"
-          ],
-          [
-            40.1168834,
-            -83.1094729,
-            "path"
-          ],
-          [
-            40.1192421,
-            -83.1092761,
-            "path"
-          ],
-          [
-            40.1208738,
-            -83.1094162,
-            "path"
-          ],
-          [
-            40.1203654,
-            -83.1038252,
-            "path"
-          ],
-          [
-            40.1203664,
-            -83.1036562,
-            "path"
-          ],
-          [
-            40.1200432,
-            -83.1012056,
-            "path"
-          ],
-          [
-            40.1201375,
-            -83.1011551,
-            "path"
-          ],
-          [
-            40.1202247,
-            -83.101094,
-            "path"
-          ],
-          [
-            40.1198275,
-            -83.099017,
-            "path"
-          ],
-          [
-            40.1198392,
-            -83.0983925,
-            "path"
-          ],
-          [
-            40.1198743,
-            -83.0980327,
-            "residential"
-          ]
-        ]
+        "score": null,
+        "distanceMi": 4.21,
+        "trailPct": 86,
+        "crossings": 1,
+        "elevationGainM": 39,
+        "routeCoords": null
       },
       "coffman": {
-        "score": 85,
-        "distanceMi": 1.53,
-        "trailPct": 93,
+        "score": 80,
+        "distanceMi": 0.96,
+        "trailPct": 56,
         "crossings": 0,
-        "elevationGainM": 20,
+        "elevationGainM": 7,
         "routeCoords": [
           [
-            40.098763,
-            -83.1150438,
+            40.111239,
+            -83.138969,
+            "residential"
+          ],
+          [
+            40.109866,
+            -83.138516,
+            "residential"
+          ],
+          [
+            40.108995,
+            -83.138528,
+            "residential"
+          ],
+          [
+            40.10902,
+            -83.137464,
+            "residential"
+          ],
+          [
+            40.108854,
+            -83.13657,
+            "residential"
+          ],
+          [
+            40.1083576,
+            -83.1368543,
             "path"
           ],
           [
-            40.0989172,
-            -83.1152449,
+            40.1083133,
+            -83.1367795,
             "path"
           ],
           [
-            40.0989067,
-            -83.1153294,
+            40.1065816,
+            -83.1357913,
             "path"
           ],
           [
-            40.098898,
-            -83.1154179,
+            40.1055137,
+            -83.1330378,
             "path"
           ],
           [
-            40.0992465,
-            -83.1154836,
+            40.1055581,
+            -83.1329908,
             "path"
           ],
           [
-            40.0992586,
-            -83.1155101,
+            40.105629,
+            -83.132961,
             "path"
           ],
           [
-            40.0991468,
-            -83.1170117,
+            40.1079276,
+            -83.1325171,
             "path"
           ],
           [
-            40.0992461,
-            -83.1170099,
-            "path"
-          ],
-          [
-            40.0993571,
-            -83.1169913,
-            "path"
-          ],
-          [
-            40.0993789,
-            -83.1170318,
-            "path"
-          ],
-          [
-            40.0993257,
-            -83.1209161,
-            "path"
-          ],
-          [
-            40.0993505,
-            -83.1211789,
-            "path"
-          ],
-          [
-            40.0994155,
-            -83.1244447,
-            "path"
-          ],
-          [
-            40.0998346,
-            -83.124595,
-            "path"
-          ],
-          [
-            40.0998613,
-            -83.1246229,
-            "path"
-          ],
-          [
-            40.09995,
-            -83.1246998,
-            "path"
-          ],
-          [
-            40.1000086,
-            -83.124743,
-            "path"
-          ],
-          [
-            40.1030332,
-            -83.1339856,
-            "path"
-          ],
-          [
-            40.1037918,
-            -83.1335209,
-            "path"
-          ],
-          [
-            40.1045475,
-            -83.1331299,
-            "path"
-          ],
-          [
-            40.1050814,
-            -83.132875,
-            "path"
-          ],
-          [
-            40.1050929,
-            -83.132855,
-            "path"
-          ],
-          [
-            40.1052009,
-            -83.1328139,
-            "path"
-          ],
-          [
-            40.1052272,
-            -83.1328046,
-            "path"
-          ],
-          [
-            40.1053872,
-            -83.1327216,
-            "path"
-          ],
-          [
-            40.1055269,
-            -83.1326998,
+            40.1079348,
+            -83.1323736,
             "path"
           ],
           [
@@ -4473,10 +4222,10 @@
       },
       "jerome": {
         "score": null,
-        "distanceMi": 5.98,
-        "trailPct": 100,
+        "distanceMi": 4.53,
+        "trailPct": 89,
         "crossings": 0,
-        "elevationGainM": 63,
+        "elevationGainM": 45,
         "routeCoords": null
       }
     }
@@ -4494,10 +4243,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 60,
+        "score": 57,
         "distanceMi": 3.34,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 44,
         "routeCoords": [
           [
@@ -4795,7 +4544,7 @@
         "score": null,
         "distanceMi": 4.06,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 38,
         "routeCoords": null
       }
@@ -4817,7 +4566,7 @@
         "score": null,
         "distanceMi": 4.8,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 44,
         "routeCoords": null
       },
@@ -5162,7 +4911,7 @@
         "score": null,
         "distanceMi": 4.53,
         "trailPct": 86,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 43,
         "routeCoords": null
       },
@@ -5249,7 +4998,7 @@
         "score": null,
         "distanceMi": 4.75,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 49,
         "routeCoords": null
       }
@@ -5268,10 +5017,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 58,
+        "score": 53,
         "distanceMi": 3.05,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 71,
         "routeCoords": [
           [
@@ -5507,10 +5256,10 @@
         ]
       },
       "coffman": {
-        "score": 55,
+        "score": 52,
         "distanceMi": 3.08,
         "trailPct": 85,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 68,
         "routeCoords": [
           [
@@ -5719,7 +5468,7 @@
         "score": null,
         "distanceMi": 7.05,
         "trailPct": 95,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 112,
         "routeCoords": null
       }
@@ -5741,7 +5490,7 @@
         "score": null,
         "distanceMi": 4.93,
         "trailPct": 94,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 51,
         "routeCoords": null
       },
@@ -5910,10 +5659,10 @@
         ]
       },
       "jerome": {
-        "score": 78,
+        "score": 76,
         "distanceMi": 2.46,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 16,
         "routeCoords": [
           [
@@ -6134,7 +5883,7 @@
         "score": null,
         "distanceMi": 15.99,
         "trailPct": 62,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 122,
         "routeCoords": null
       },
@@ -6164,15 +5913,15 @@
         "score": null,
         "distanceMi": 4.05,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 52,
         "routeCoords": null
       },
       "coffman": {
-        "score": 53,
+        "score": 50,
         "distanceMi": 3.74,
         "trailPct": 95,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 45,
         "routeCoords": [
           [
@@ -6401,7 +6150,7 @@
         "score": null,
         "distanceMi": 7.71,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 89,
         "routeCoords": null
       }
@@ -6423,7 +6172,7 @@
         "score": null,
         "distanceMi": 12.78,
         "trailPct": 92,
-        "crossings": 0,
+        "crossings": 3,
         "elevationGainM": 159,
         "routeCoords": null
       },
@@ -6431,7 +6180,7 @@
         "score": null,
         "distanceMi": 12.47,
         "trailPct": 90,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 152,
         "routeCoords": null
       },
@@ -6439,7 +6188,7 @@
         "score": null,
         "distanceMi": 15.72,
         "trailPct": 93,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 164,
         "routeCoords": null
       }
@@ -6458,10 +6207,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 60,
+        "score": 58,
         "distanceMi": 3.5,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 36,
         "routeCoords": [
           [
@@ -6706,7 +6455,7 @@
         "score": null,
         "distanceMi": 4.95,
         "trailPct": 97,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 60,
         "routeCoords": null
       },
@@ -6744,7 +6493,7 @@
         "score": null,
         "distanceMi": 5.35,
         "trailPct": 92,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 48,
         "routeCoords": null
       },
@@ -6948,7 +6697,7 @@
         "score": null,
         "distanceMi": 6.61,
         "trailPct": 92,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 54,
         "routeCoords": null
       },
@@ -7253,7 +7002,7 @@
         "score": null,
         "distanceMi": 7.59,
         "trailPct": 96,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 71,
         "routeCoords": null
       },
@@ -7261,7 +7010,7 @@
         "score": null,
         "distanceMi": 5.44,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 40,
         "routeCoords": null
       },
@@ -7352,7 +7101,7 @@
         "score": null,
         "distanceMi": 7.13,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 62,
         "routeCoords": null
       },
@@ -7737,7 +7486,7 @@
         "score": null,
         "distanceMi": 11.31,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 70,
         "routeCoords": null
       },
@@ -7856,7 +7605,7 @@
         "score": null,
         "distanceMi": 6.88,
         "trailPct": 96,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 53,
         "routeCoords": null
       },
@@ -8226,7 +7975,7 @@
         "score": null,
         "distanceMi": 7.08,
         "trailPct": 98,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 62,
         "routeCoords": null
       },
@@ -8576,15 +8325,15 @@
         "score": null,
         "distanceMi": 6.91,
         "trailPct": 93,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 53,
         "routeCoords": null
       },
       "coffman": {
-        "score": 57,
+        "score": 54,
         "distanceMi": 3.66,
         "trailPct": 85,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 21,
         "routeCoords": [
           [
@@ -8860,15 +8609,15 @@
         "score": null,
         "distanceMi": 6.28,
         "trailPct": 94,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 55,
         "routeCoords": null
       },
       "coffman": {
-        "score": 63,
+        "score": 61,
         "distanceMi": 3.07,
         "trailPct": 86,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 24,
         "routeCoords": [
           [
@@ -9121,10 +8870,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 73,
+        "score": 70,
         "distanceMi": 1.34,
         "trailPct": 52,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 14,
         "routeCoords": [
           [
@@ -9253,7 +9002,7 @@
         "score": null,
         "distanceMi": 4.16,
         "trailPct": 73,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 46,
         "routeCoords": null
       },
@@ -9261,7 +9010,7 @@
         "score": null,
         "distanceMi": 8.04,
         "trailPct": 88,
-        "crossings": 0,
+        "crossings": 3,
         "elevationGainM": 85,
         "routeCoords": null
       }
@@ -9280,10 +9029,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 83,
+        "score": 85,
         "distanceMi": 1.06,
         "trailPct": 72,
-        "crossings": 1,
+        "crossings": 0,
         "elevationGainM": 9,
         "routeCoords": [
           [
@@ -9621,7 +9370,7 @@
         "score": null,
         "distanceMi": 7.76,
         "trailPct": 94,
-        "crossings": 1,
+        "crossings": 2,
         "elevationGainM": 80,
         "routeCoords": null
       }
@@ -9643,7 +9392,7 @@
         "score": null,
         "distanceMi": 4.42,
         "trailPct": 78,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 71,
         "routeCoords": null
       },
@@ -9651,7 +9400,7 @@
         "score": null,
         "distanceMi": 4.46,
         "trailPct": 72,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 68,
         "routeCoords": null
       },
@@ -9659,7 +9408,7 @@
         "score": null,
         "distanceMi": 8.43,
         "trailPct": 87,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 112,
         "routeCoords": null
       }
@@ -9678,10 +9427,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 90,
+        "score": 88,
         "distanceMi": 0.93,
         "trailPct": 91,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 21,
         "routeCoords": [
           [
@@ -9869,7 +9618,7 @@
         "score": null,
         "distanceMi": 6.35,
         "trailPct": 98,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 73,
         "routeCoords": null
       }
@@ -9888,10 +9637,10 @@
     ],
     "schools": {
       "scioto": {
-        "score": 70,
+        "score": 65,
         "distanceMi": 2.43,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 45,
         "routeCoords": [
           [
@@ -10067,10 +9816,10 @@
         ]
       },
       "coffman": {
-        "score": 72,
+        "score": 70,
         "distanceMi": 2.11,
         "trailPct": 92,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 38,
         "routeCoords": [
           [
@@ -10214,7 +9963,7 @@
         "score": null,
         "distanceMi": 6.08,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 82,
         "routeCoords": null
       }
@@ -10305,7 +10054,7 @@
         "score": null,
         "distanceMi": 4.42,
         "trailPct": 89,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 41,
         "routeCoords": null
       },
@@ -10313,7 +10062,7 @@
         "score": null,
         "distanceMi": 7.65,
         "trailPct": 98,
-        "crossings": 0,
+        "crossings": 2,
         "elevationGainM": 83,
         "routeCoords": null
       }
@@ -10335,7 +10084,7 @@
         "score": null,
         "distanceMi": 5.52,
         "trailPct": 89,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 61,
         "routeCoords": null
       },
@@ -10351,7 +10100,7 @@
         "score": null,
         "distanceMi": 4.62,
         "trailPct": 84,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 58,
         "routeCoords": null
       }
@@ -10373,7 +10122,7 @@
         "score": null,
         "distanceMi": 11.65,
         "trailPct": 100,
-        "crossings": 0,
+        "crossings": 1,
         "elevationGainM": 72,
         "routeCoords": null
       },

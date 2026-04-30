@@ -1,5 +1,6 @@
 import pytest
 import sys, os
+import networkx as nx
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from build_scores import (
     compute_score,
@@ -8,6 +9,25 @@ from build_scores import (
     count_arterial_crossings,
     compute_elevation_gain,
 )
+
+
+def _make_route(route_edge_names, side_arterials=None):
+    """Build a MultiDiGraph and path for crossing tests.
+    route_edge_names: names of edges along the route (len N -> N+1 nodes).
+    side_arterials: list of (node_index, arterial_name) for adjacent-but-not-route arterials.
+    Returns (G, path_nodes).
+    """
+    G = nx.MultiDiGraph()
+    path = list(range(len(route_edge_names) + 1))
+    for i, name in enumerate(route_edge_names):
+        G.add_edge(i, i + 1, highway="residential", name=name, weight=2.0)
+        G.add_edge(i + 1, i, highway="residential", name=name, weight=2.0)
+    extra = len(path)
+    for node_idx, art_name in (side_arterials or []):
+        G.add_edge(node_idx, extra, highway="primary", name=art_name, weight=5.0)
+        G.add_edge(extra, node_idx, highway="primary", name=art_name, weight=5.0)
+        extra += 1
+    return G, path
 
 
 def test_score_returns_none_above_4_miles():
@@ -86,32 +106,49 @@ def test_classify_arterial_edges():
 
 
 def test_classify_arterial_by_name():
-    assert classify_edge_type({"highway": "residential", "name": "Sawmill Road"}) == "arterial"
-    assert classify_edge_type({"highway": "residential", "name": "Avery Road"})   == "arterial"
+    assert classify_edge_type({"highway": "residential", "name": "Sawmill Road"})        == "arterial"
+    assert classify_edge_type({"highway": "residential", "name": "Avery Road"})          == "arterial"
+    assert classify_edge_type({"highway": "primary",     "name": "East Bridge Street"})  == "arterial"
+    assert classify_edge_type({"highway": "primary",     "name": "West Dublin Granville Road"}) == "arterial"
+    assert classify_edge_type({"highway": "primary",     "name": "West Dublin-Granville Road"}) == "arterial"
 
 
 def test_count_crossings_zero():
-    assert count_arterial_crossings([{"highway": "path"}, {"highway": "residential"}]) == 0
+    G, path = _make_route(["Trail", "Oak Lane"])
+    assert count_arterial_crossings(G, path) == 0
 
 
 def test_count_crossings_distinct_roads():
-    edges = [
-        {"highway": "primary", "name": "Sawmill Road"},
-        {"highway": "primary", "name": "Sawmill Road"},
-        {"highway": "primary", "name": "Avery Road"},
-    ]
-    assert count_arterial_crossings(edges) == 2
+    # Route passes through two nodes that each intersect a distinct arterial
+    G, path = _make_route(
+        ["Oak Lane", "Oak Lane", "Oak Lane"],
+        side_arterials=[(1, "Sawmill Road"), (2, "Avery Road")],
+    )
+    assert count_arterial_crossings(G, path) == 2
+
+
+def test_count_crossings_same_road_counts_once():
+    # Two nodes adjacent to the same arterial still count as 1 crossing
+    G, path = _make_route(
+        ["Oak Lane", "Oak Lane", "Oak Lane"],
+        side_arterials=[(1, "Sawmill Road"), (2, "Sawmill Road")],
+    )
+    assert count_arterial_crossings(G, path) == 1
 
 
 def test_count_crossings_max_five():
-    edges = [
-        {"highway": "primary", "name": "Sawmill Road"},
-        {"highway": "primary", "name": "SR-161"},
-        {"highway": "primary", "name": "Avery Road"},
-        {"highway": "primary", "name": "Hyland Croy Road"},
-        {"highway": "primary", "name": "Hard Road"},
-    ]
-    assert count_arterial_crossings(edges) == 5
+    G, path = _make_route(
+        ["Oak Lane"] * 7,
+        side_arterials=[
+            (1, "Sawmill Road"),
+            (2, "East Bridge Street"),   # SR-161
+            (3, "Avery Road"),
+            (4, "Hyland Croy Road"),
+            (5, "Hard Road"),
+            (6, "Some Other Big Road"),  # would be 6th but capped
+        ],
+    )
+    assert count_arterial_crossings(G, path) == 5
 
 
 def test_elevation_gain_flat():
