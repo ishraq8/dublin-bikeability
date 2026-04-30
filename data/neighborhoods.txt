@@ -1,6 +1,68 @@
-# Add one neighborhood name per line. The pipeline geocodes each name
-# using Nominatim with "Dublin, OH" as location bias.
-# Example:
-# Muirfield Village
+# Dublin City Schools neighborhoods — one name per line.
+# Geocoded via Nominatim with "Dublin, OH" location bias.
+# Excludes: Hayden Crossing, Hayden Farms (Dublin address, different school district)
+
+# Golf & luxury communities
+Muirfield Village
+Tartan Fields
+Tartan Ridge
+Tartan West
+
+# Master-planned communities
+Jerome Village
+Bridge Park
+
 # Ballantrae
-# Tartan Fields
+Ballantrae
+
+# Premium & estate neighborhoods
+Belvedere
+Oak Park
+The Oaks
+Donegal Cliffs
+Wyandotte Woods
+Amberleigh
+Coventry Woods
+Wedgewood Glen
+Wedgewood Hills
+Wellington Place
+Woods of Dublin
+Riviera
+Bristol Commons
+
+# Established central Dublin
+Historic Dublin
+Hemingway Village
+Brandon
+Indian Run Meadows
+Woods of Indian Run
+Earlington Village
+Dublinshire
+Hawks Nest
+Llewellyn Farms
+Waterford Village
+Shannon Park
+Shannon Heights
+Heather Glen
+Park Place
+
+# Northwest Dublin & newer communities
+Celtic Crossing
+Bishops Run
+Glacier Park
+Post Preserve
+Westbury
+Kendall Ridge
+Sandy Corners
+
+# Sawmill corridor & south Dublin
+Olde Sawmill
+Sawmill Forest
+Riverside Green
+Riverside Woods
+Greystone Mews
+Estates at Scioto Crossing
+
+# Outside Dublin city limits — still in DCS
+Shawnee Hills
+New California

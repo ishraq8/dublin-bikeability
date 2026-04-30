@@ -14,9 +14,9 @@ OUTPUT_PATH    = os.path.join(os.path.dirname(__file__), "scores.json")
 REACT_OUTPUT   = os.path.join(os.path.dirname(__file__), "..", "src", "data", "scores.json")
 
 SCHOOLS = {
-    "scioto":  {"lat": 40.0978, "lng": -83.0742},
-    "coffman": {"lat": 40.0934, "lng": -83.1089},
-    "jerome":  {"lat": 40.1312, "lng": -83.1102},
+    "scioto":  {"lat": 40.11974, "lng": -83.09762},  # 4000 Hard Rd
+    "coffman": {"lat": 40.10822, "lng": -83.12956},  # 6780 Coffman Rd
+    "jerome":  {"lat": 40.13493, "lng": -83.17589},  # 8300 Hyland-Croy Rd
 }
 
 ARTERIAL_NAMES   = {"sawmill", "sr-161", "state route 161", "avery", "hyland croy", "hard"}
@@ -34,7 +34,7 @@ def compute_score(distance_mi: float, trail_pct: float, crossings: int, elevatio
     distance_score = 100.0 if distance_mi <= 1 else ((4 - distance_mi) / 3) * 100
     crossing_score = max(0.0, 100 - crossings * 25)
     terrain_score  = max(0.0, 100 - elevation_gain_m * 2)
-    return round(trail_pct * 0.40 + distance_score * 0.25 + crossing_score * 0.25 + terrain_score * 0.10)
+    return round(trail_pct * 0.40 + distance_score * 0.35 + crossing_score * 0.10 + terrain_score * 0.15)
 
 
 def get_edge_weight(data: dict) -> float:
@@ -193,11 +193,11 @@ def main() -> None:
 
     with open(OUTPUT_PATH, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"\nScores written → {OUTPUT_PATH}")
+    print(f"\nScores written -> {OUTPUT_PATH}")
 
     os.makedirs(os.path.dirname(os.path.abspath(REACT_OUTPUT)), exist_ok=True)
     shutil.copy(OUTPUT_PATH, REACT_OUTPUT)
-    print(f"Copied → {REACT_OUTPUT}")
+    print(f"Copied -> {REACT_OUTPUT}")
 
 
 if __name__ == "__main__":

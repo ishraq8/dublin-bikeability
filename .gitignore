@@ -6,3 +6,4 @@ data/scores.json
 __pycache__/
 *.pyc
 .env
+cache/

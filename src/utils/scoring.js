@@ -9,9 +9,9 @@ export function computeScore(distanceMi, trailPct, crossings, elevationGainM) {
   const terrainScore  = Math.max(0, 100 - elevationGainM * 2);
   return Math.round(
     trailPct      * 0.40 +
-    distanceScore * 0.25 +
-    crossingScore * 0.25 +
-    terrainScore  * 0.10
+    distanceScore * 0.35 +
+    crossingScore * 0.10 +
+    terrainScore  * 0.15
   );
 }
 
@@ -38,8 +38,8 @@ export function computeComponentScores(schoolData) {
   const terrainScore  = Math.max(0, 100 - elevationGainM * 2);
   return {
     trail:     Math.round(trailPct      * 0.40),
-    distance:  Math.round(distanceScore * 0.25),
-    crossings: Math.round(crossingScore * 0.25),
-    terrain:   Math.round(terrainScore  * 0.10),
+    distance:  Math.round(distanceScore * 0.35),
+    crossings: Math.round(crossingScore * 0.10),
+    terrain:   Math.round(terrainScore  * 0.15),
   };
 }

@@ -1,17 +1,23 @@
+import { useState } from 'react';
 import GradeBadge from './GradeBadge.jsx';
 
-const COLUMNS = [
-  { key: 'rank',        label: '#',         align: 'center' },
-  { key: 'name',        label: 'Neighborhood', align: 'left' },
-  { key: 'grade',       label: 'Grade',     align: 'center' },
-  { key: 'score',       label: 'Score',     align: 'center' },
-  { key: 'distanceMi',  label: 'Distance',  align: 'center' },
-  { key: 'trailPct',    label: 'Trail %',   align: 'center' },
-  { key: 'crossings',   label: 'Crossings', align: 'center' },
-  { key: 'elevationGainM', label: 'Elev Gain', align: 'center' },
+const MONO = "'JetBrains Mono', monospace";
+const COND = "'Barlow Condensed', sans-serif";
+
+const COLS = [
+  { label: '#',         width: 48,  align: 'center' },
+  { label: 'Neighborhood', width: 'auto', align: 'left' },
+  { label: 'Gr',        width: 52,  align: 'center' },
+  { label: 'Score',     width: 72,  align: 'center' },
+  { label: 'Distance',  width: 90,  align: 'center' },
+  { label: 'Trail %',   width: 110, align: 'center' },
+  { label: 'Crossings', width: 88,  align: 'center' },
+  { label: 'Elev Gain', width: 88,  align: 'center' },
 ];
 
 export default function NeighborhoodTable({ neighborhoods, activeSchool, selectedId, onSelect }) {
+  const [hovered, setHovered] = useState(null);
+
   const scored = neighborhoods
     .filter((n) => n.schools[activeSchool].score !== null)
     .sort((a, b) => b.schools[activeSchool].score - a.schools[activeSchool].score);
@@ -19,14 +25,27 @@ export default function NeighborhoodTable({ neighborhoods, activeSchool, selecte
   const sorted = [...scored, ...nonBikeable];
 
   return (
-    <div className="overflow-auto h-full">
-      <table className="w-full border-collapse text-sm">
-        <thead className="sticky top-0 bg-white z-10 shadow-sm">
-          <tr>
-            {COLUMNS.map((col) => (
+    <div style={{ overflowY: 'auto', height: '100%' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr style={{ position: 'sticky', top: 0, zIndex: 10, backgroundColor: '#fff' }}>
+            {COLS.map((col) => (
               <th
-                key={col.key}
-                className={`px-4 py-2.5 font-semibold text-gray-500 text-xs uppercase tracking-wide border-b border-gray-200 text-${col.align}`}
+                key={col.label}
+                style={{
+                  width: col.width !== 'auto' ? col.width : undefined,
+                  padding: '10px 12px',
+                  textAlign: col.align,
+                  fontFamily: COND,
+                  fontWeight: 700,
+                  fontSize: 10,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: '#aaa',
+                  borderBottom: '2px solid var(--school-color)',
+                  whiteSpace: 'nowrap',
+                  transition: 'border-bottom-color 0.2s ease',
+                }}
               >
                 {col.label}
               </th>
@@ -38,65 +57,94 @@ export default function NeighborhoodTable({ neighborhoods, activeSchool, selecte
             const s = n.schools[activeSchool];
             const isNonBikeable = s.score === null;
             const isSelected = n.id === selectedId;
-            const rank = isNonBikeable ? '✕' : idx + 1;
+            const isHovered = n.id === hovered && !isSelected;
+            const rank = isNonBikeable ? '—' : idx + 1;
+
+            let bgColor = '#fff';
+            if (isSelected) bgColor = 'var(--school-tint-12)';
+            else if (isHovered) bgColor = 'var(--school-tint-6)';
+            else if (isNonBikeable) bgColor = '#fafafa';
 
             return (
               <tr
                 key={n.id}
-                onClick={() => onSelect(n.id)}
-                className={[
-                  'cursor-pointer border-b border-gray-100 transition-colors',
-                  isSelected ? 'bg-blue-50' : 'hover:bg-gray-50',
-                  isNonBikeable ? 'opacity-40' : '',
-                ].join(' ')}
+                data-testid="neighborhood-row"
+                onClick={() => onSelect(n.id === selectedId ? null : n.id)}
+                onMouseEnter={() => setHovered(n.id)}
+                onMouseLeave={() => setHovered(null)}
+                style={{
+                  cursor: 'pointer',
+                  backgroundColor: bgColor,
+                  borderBottom: '1px solid #f2f2f2',
+                  borderLeft: isSelected
+                    ? '3px solid var(--school-color)'
+                    : '3px solid transparent',
+                  opacity: isNonBikeable ? 0.45 : 1,
+                  transition: 'background-color 0.1s ease, border-left-color 0.15s ease',
+                }}
               >
-                <td className="px-4 py-2.5 text-center text-gray-400 font-mono text-xs">{rank}</td>
+                <td style={{ padding: '10px 12px', textAlign: 'center', fontFamily: MONO, fontSize: 11, color: '#ccc', fontWeight: 400 }}>
+                  {rank}
+                </td>
 
-                <td className="px-4 py-2.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="font-medium text-gray-800">{n.name}</span>
+                <td style={{ padding: '10px 12px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+                    <span style={{ fontFamily: COND, fontWeight: 600, fontSize: 15, color: '#111' }}>
+                      {n.name}
+                    </span>
                     {n.redistricting && (
-                      <span className="text-[10px] font-bold text-orange-600 border border-orange-400 rounded px-1 leading-tight">
-                        REDIST.
+                      <span style={{
+                        fontFamily: COND,
+                        fontSize: 9,
+                        fontWeight: 700,
+                        letterSpacing: '0.1em',
+                        color: '#b45309',
+                        border: '1px solid #d97706',
+                        borderRadius: 2,
+                        padding: '1px 5px',
+                      }}>
+                        REDIST
                       </span>
                     )}
                   </div>
-                  {n.region && <div className="text-xs text-gray-400">{n.region}</div>}
                 </td>
 
-                <td className="px-4 py-2.5 text-center">
-                  <div className="flex justify-center">
+                <td style={{ padding: '10px 12px', textAlign: 'center' }}>
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <GradeBadge score={s.score} />
                   </div>
                 </td>
 
-                <td className="px-4 py-2.5 text-center font-bold text-gray-700">
+                <td style={{ padding: '10px 12px', textAlign: 'center', fontFamily: MONO, fontWeight: 600, fontSize: 17, color: '#111' }}>
                   {s.score ?? '—'}
                 </td>
 
-                <td className="px-4 py-2.5 text-center font-mono text-gray-600">
+                <td style={{ padding: '10px 12px', textAlign: 'center', fontFamily: MONO, fontSize: 12, color: '#666' }}>
                   {s.distanceMi != null ? `${s.distanceMi.toFixed(1)} mi` : '—'}
                 </td>
 
-                <td className="px-4 py-2.5 text-center">
+                <td style={{ padding: '10px 14px', textAlign: 'center' }}>
                   {s.trailPct != null ? (
-                    <div className="flex flex-col items-center gap-1">
-                      <span className="font-mono text-gray-600">{s.trailPct}%</span>
-                      <div className="w-16 h-1 bg-gray-200 rounded-full overflow-hidden">
-                        <div
-                          className="h-full rounded-full"
-                          style={{ width: `${s.trailPct}%`, backgroundColor: '#16a34a' }}
-                        />
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+                      <span style={{ fontFamily: MONO, fontSize: 11, color: '#666' }}>{s.trailPct}%</span>
+                      <div style={{ width: 64, height: 3, backgroundColor: '#ebebeb', borderRadius: 99, overflow: 'hidden' }}>
+                        <div style={{
+                          width: `${s.trailPct}%`,
+                          height: '100%',
+                          backgroundColor: 'var(--school-color)',
+                          borderRadius: 99,
+                          transition: 'background-color 0.2s ease',
+                        }} />
                       </div>
                     </div>
                   ) : '—'}
                 </td>
 
-                <td className="px-4 py-2.5 text-center font-mono text-gray-600">
+                <td style={{ padding: '10px 12px', textAlign: 'center', fontFamily: MONO, fontSize: 12, color: '#666' }}>
                   {s.crossings ?? '—'}
                 </td>
 
-                <td className="px-4 py-2.5 text-center font-mono text-gray-600">
+                <td style={{ padding: '10px 12px', textAlign: 'center', fontFamily: MONO, fontSize: 12, color: '#666' }}>
                   {s.elevationGainM != null ? `${s.elevationGainM} m` : '—'}
                 </td>
               </tr>

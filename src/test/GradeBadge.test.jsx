@@ -8,9 +8,9 @@ describe('GradeBadge', () => {
     expect(screen.getByText('A')).toBeInTheDocument();
   });
 
-  it('shows ✕ for null score', () => {
+  it('shows — for null score', () => {
     render(<GradeBadge score={null} />);
-    expect(screen.getByText('✕')).toBeInTheDocument();
+    expect(screen.getByText('—')).toBeInTheDocument();
   });
 
   it('shows F for score 20', () => {

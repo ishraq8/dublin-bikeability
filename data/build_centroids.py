@@ -72,7 +72,7 @@ def main() -> None:
         json.dump(results, f, indent=2)
 
     failed = [r for r in results if r["lat"] is None]
-    print(f"\nDone. {len(results) - len(failed)}/{len(results)} geocoded → {OUTPUT_PATH}")
+    print(f"\nDone. {len(results) - len(failed)}/{len(results)} geocoded -> {OUTPUT_PATH}")
     if failed:
         print("Failed lookups (fix manually in centroids.json):")
         for r in failed:

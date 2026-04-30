@@ -11,39 +11,44 @@ from build_scores import (
 
 
 def test_score_returns_none_above_4_miles():
-    assert compute_score(4.1, 80, 0, 0) is None
-    assert compute_score(10, 100, 0, 0) is None
+    assert compute_score(distance_mi=4.1, trail_pct=80, crossings=0, elevation_gain_m=0) is None
+    assert compute_score(distance_mi=10,  trail_pct=100, crossings=0, elevation_gain_m=0) is None
 
 
 def test_score_max_for_ideal_route():
+    # 100*0.40 + 100*0.35 + 100*0.10 + 100*0.15 = 100
     assert compute_score(0.5, 100, 0, 0) == 100
 
 
 def test_score_distance_tapers_linearly():
-    # 0% trail, 2.5mi → dist_score=50, 0 crossings, 0 elevation
-    # 0*0.4 + 50*0.25 + 100*0.25 + 100*0.10 = 47.5 → 48
-    assert compute_score(2.5, 0, 0, 0) == 48
+    # 0% trail, 2.5mi -> dist_score=50, 0 crossings, 0 elevation
+    # 0*0.40 + 50*0.35 + 100*0.10 + 100*0.15 = 0+17.5+10+15 = 42.5
+    # Python banker's rounding: round(42.5) = 42
+    assert compute_score(2.5, 0, 0, 0) == 42
 
 
 def test_score_crossing_penalty():
-    # 100% trail, 0.5mi, 2 crossings → crossing_score=50
-    # 40+25+12.5+10 = 87.5 → 88
-    assert compute_score(0.5, 100, 2, 0) == 88
+    # 100% trail, 0.5mi, 2 crossings -> crossing_score=50
+    # 100*0.40 + 100*0.35 + 50*0.10 + 100*0.15 = 40+35+5+15 = 95
+    assert compute_score(0.5, 100, 2, 0) == 95
 
 
 def test_score_crossing_clamped_at_zero():
-    # 0% trail, 0.5mi, 4 crossings → 0+25+0+10 = 35
-    assert compute_score(0.5, 0, 4, 0) == 35
+    # 0% trail, 0.5mi, 4 crossings -> crossing_score=0
+    # 0*0.40 + 100*0.35 + 0*0.10 + 100*0.15 = 0+35+0+15 = 50
+    assert compute_score(0.5, 0, 4, 0) == 50
 
 
 def test_score_elevation_penalty():
-    # 100% trail, 0.5mi, 0 crossings, 30m → terrain=40 → 40+25+25+4 = 94
-    assert compute_score(0.5, 100, 0, 30) == 94
+    # 100% trail, 0.5mi, 0 crossings, 30m elevation -> terrain=40
+    # 100*0.40 + 100*0.35 + 100*0.10 + 40*0.15 = 40+35+10+6 = 91
+    assert compute_score(0.5, 100, 0, 30) == 91
 
 
 def test_score_terrain_clamped_at_zero():
-    # 0% trail, 0.5mi, 0 crossings, 50m → terrain=0 → 0+25+25+0 = 50
-    assert compute_score(0.5, 0, 0, 50) == 50
+    # 0% trail, 0.5mi, 0 crossings, 50m elevation -> terrain=0
+    # 0*0.40 + 100*0.35 + 100*0.10 + 0*0.15 = 0+35+10+0 = 45
+    assert compute_score(0.5, 0, 0, 50) == 45
 
 
 def test_edge_weight_path():
