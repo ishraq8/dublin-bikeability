@@ -44,6 +44,7 @@ Waterford Village
 Shannon Park
 Shannon Heights
 Heather Glen
+Killilea
 Park Place
 
 # Northwest Dublin & newer communities

@@ -113,8 +113,16 @@ def compute_elevation_gain(elevations: list[float]) -> float:
 
 
 def add_edge_weights(G) -> None:
+    lengths = [
+        min(G[u][v][k].get("length", 0) for k in G[u][v])
+        for u, v in G.edges()
+    ]
+    avg_len = sum(lengths) / len(lengths) if lengths else 96.0
     for u, v, k, data in G.edges(keys=True, data=True):
-        data["weight"] = 1 / get_edge_weight(data)
+        pref = 1.0 / get_edge_weight(data)
+        norm_len = data.get("length", avg_len) / avg_len
+        # 70% trail preference + 30% physical distance to avoid unnecessarily long detours
+        data["weight"] = 0.7 * pref + 0.3 * norm_len
 
 
 def get_route_edges(G, path_nodes: list) -> list[dict]:
