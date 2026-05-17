@@ -15464,5 +15464,81 @@
         ]
       }
     }
+  },
+  {
+    "id": "river-forest",
+    "name": "River Forest",
+    "region": "Dublin City",
+    "current_hs": null,
+    "redistricting": false,
+    "lat": 40.1334666,
+    "lng": -83.1318419,
+    "includes": [
+      "River Forest"
+    ],
+    "schools": {
+      "scioto": {
+        "score": null,
+        "distanceMi": null,
+        "trailPct": null,
+        "crossings": null,
+        "elevationGainM": null,
+        "routeCoords": null
+      },
+      "coffman": {
+        "score": null,
+        "distanceMi": null,
+        "trailPct": null,
+        "crossings": null,
+        "elevationGainM": null,
+        "routeCoords": null
+      },
+      "jerome": {
+        "score": null,
+        "distanceMi": null,
+        "trailPct": null,
+        "crossings": null,
+        "elevationGainM": null,
+        "routeCoords": null
+      }
+    }
+  },
+  {
+    "id": "the-reserve",
+    "name": "The Reserve",
+    "region": "Dublin City",
+    "current_hs": null,
+    "redistricting": false,
+    "lat": 40.1404114,
+    "lng": -83.1328463,
+    "includes": [
+      "The Reserve"
+    ],
+    "schools": {
+      "scioto": {
+        "score": null,
+        "distanceMi": null,
+        "trailPct": null,
+        "crossings": null,
+        "elevationGainM": null,
+        "routeCoords": null
+      },
+      "coffman": {
+        "score": null,
+        "distanceMi": null,
+        "trailPct": null,
+        "crossings": null,
+        "elevationGainM": null,
+        "routeCoords": null
+      },
+      "jerome": {
+        "score": null,
+        "distanceMi": null,
+        "trailPct": null,
+        "crossings": null,
+        "elevationGainM": null,
+        "routeCoords": null
+      }
+    }
   }
 ]
